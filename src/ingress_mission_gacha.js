@@ -3,7 +3,7 @@ const TeleBot = require('telebot');
 const { nanoid } = require('nanoid');
 
 
-const bot = new TeleBot(process.argv[2])  // BotToken
+const bot = new TeleBot(process.env.API_TOKEN)  // BotToken
 let missions
 csv().fromFile('src/missions.csv').then(m => missions = m);
 
